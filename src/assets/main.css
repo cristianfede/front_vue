@@ -1,9 +1,7 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  padding: auto;
   font-weight: normal;
 }
 
@@ -24,12 +22,16 @@ a,
 @media (min-width: 1024px) {
   body {
     display: flex;
-    place-items: center;
+    flex-direction: column;
+    align-items: stretch; /* En lugar de center */
+    min-height: 100vh;
   }
 
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    display: flex; /* En lugar de grid */
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 0;
   }
 }
